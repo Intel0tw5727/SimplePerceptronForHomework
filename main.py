@@ -18,7 +18,7 @@ P2 *= -1
 point = np.r_[np.array(P1),np.array(P2)]
 
 # ## Learning
-a = SimplePerceptron()
+a = SimplePerceptron(step=0.5, epochs=100)
 ans = a.train(point)
 
 
@@ -32,5 +32,5 @@ y = (ans[0] * x + ans[2]) / (-ans[1])
 plt.plot(x,y,"r-")
 plt.plot(x1[0], x1[1],"o")
 plt.plot(x2[0], x2[1], "o")
-plt.show()
 plt.savefig("fig.pdf")
+plt.show()
